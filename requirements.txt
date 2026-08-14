@@ -1,0 +1,19 @@
+# ===== litdiscovery 依赖锁定（与已知可用环境 Python 3.12 一致） =====
+# 用途：`pip install -r requirements.txt` 即可复现运行环境，避免版本漂移。
+# 与 pyproject.toml 的 [project.dependencies] 保持一致，此处追加精确版本锁定。
+
+# --- 核心依赖 ---
+requests==2.32.3
+pandas==2.3.3
+pydantic==2.8.2
+tiktoken==0.13.0
+pyyaml==6.0.1
+langchain-core==1.5.3
+langchain-openai==1.4.1
+langgraph==1.2.10
+
+# --- PDF 转换（Docling，体量较大；如无需 PDF→Markdown 可删除本行） ---
+docling==2.118.0
+
+# --- 测试（可选，仅开发者运行 pytest 需要） ---
+pytest==7.4.4

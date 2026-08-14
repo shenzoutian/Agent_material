@@ -1,0 +1,55 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ===== 文献数据 / 运行产物（不入库，体量大且可再生） =====
+doi_reach_log/
+data_doi/
+log/
+*.log
+pdf2markdown.txt
+
+# ===== 个人配置（本机路径 / 权限） =====
+.claude/
+
+# ===== 密钥（不入库；模板见 .env.example） =====
+.env
+.env.local
+
+# ===== 系统文件 =====
+.DS_Store
+Thumbs.db
+desktop.ini
+to_markdown.txt
+
+# ===== litdiscovery 重构后统一产物根 =====
+artifacts/
+knowledge_store/
+db_validate_out/
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest-tmp/
+
+# ===== 迁移后旧布局空壳标记（copy 模式产生） =====
+.legacy_migrated
+
+# ===== 项目文档（公开仓库仅保留 README） =====
+*.md
+!README.md
+
+# ===== 个人文档 / 非代码文件（不入库） =====
+*.docx
+*.doc
+*.pdf
+
+# ===== 个人工作文件（竞赛方案等，不入库） =====
+build_optimized_proposal.py
+qa_docx*/

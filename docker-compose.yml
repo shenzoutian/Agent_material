@@ -1,0 +1,18 @@
+# litdiscovery —— 一键编排
+# 前置：复制 .env.example 为 .env 并填入密钥（否则核心 LLM 阶段无法运行）
+# 用法：
+#   docker compose build                                    # 构建镜像
+#   docker compose run --rm litdiscovery --help             # 查看命令
+#   docker compose run --rm litdiscovery run --requirement "..." --auto
+#   环境自检（doctor 为独立脚本，不注入 CLI，见 tools/doctor.py）：
+#   docker compose run --rm --entrypoint python litdiscovery tools/doctor.py
+
+services:
+  litdiscovery:
+    build: .
+    image: litdiscovery:latest
+    env_file:
+      - .env
+    volumes:
+      - ./artifacts:/app/artifacts
+    entrypoint: ["litdiscovery"]
